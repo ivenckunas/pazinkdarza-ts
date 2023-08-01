@@ -1,0 +1,11 @@
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .images-container {
+    img {
+      height: 40vh;
+      object-fit: cover;
+    }
+  }
+}
