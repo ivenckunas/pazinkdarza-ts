@@ -1,6 +1,6 @@
-import React, {useContext, useRef, useState, useEffect} from 'react';
-import dataArr from '../../data/dataArr';
+import {useContext, useRef, useState, useEffect} from 'react';
 import './searchBar.scss';
+import dataArr from '../../data/dataArr';
 import MainContext from '../../Context/MainContext';
 
 function SearchBar() {
@@ -23,7 +23,8 @@ function SearchBar() {
 	};
 
 	return (
-		<div>
+		<div className='search-container'>
+			<div className='label'>Nori greiciau? Ieskok:</div>
 			<input
 				type='text'
 				onChange={(e) => {

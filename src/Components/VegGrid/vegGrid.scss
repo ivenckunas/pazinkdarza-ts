@@ -1,7 +1,9 @@
 .grid-container {
+  flex-grow: 1;
   margin: 5rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
 
   .single-veg {
     display: flex;

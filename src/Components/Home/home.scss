@@ -1,4 +1,11 @@
-.home-container {
-  max-width: 1400px;
-  margin: 5rem auto;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: min(90%, 1400px);
+  margin: auto;
+  padding-top: 5rem;
+
 }
