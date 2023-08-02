@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import './vegGrid.scss';
 import dataArr from '../../data/dataArr';
 import MainContext from '../../Context/MainContext';
@@ -9,11 +9,15 @@ function VegGrid() {
 		setOpenedVeg(id);
 	};
 
-	const {setOpenedVeg, openedVeg} = useContext(MainContext);
+	useEffect(() => {
+		setVegetablesArr(dataArr);
+	}, []);
+
+	const {setOpenedVeg, openedVeg, vegetablesArr, setVegetablesArr} = useContext(MainContext);
 
 	return (
 		<div className='grid-container'>
-			{dataArr.map((el, id) => (
+			{vegetablesArr.map((el, id) => (
 				<div
 					key={id}
 					className='single-veg'

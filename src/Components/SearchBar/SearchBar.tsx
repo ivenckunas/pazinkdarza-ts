@@ -1,11 +1,25 @@
-import React, {useRef, useState} from 'react';
+import React, {useContext, useRef, useState, useEffect} from 'react';
+import dataArr from '../../data/dataArr';
 import './searchBar.scss';
+import MainContext from '../../Context/MainContext';
 
 function SearchBar() {
+	const {setOpenedVeg, openedVeg, vegetablesArr, setVegetablesArr} = useContext(MainContext);
+
 	const searchPhrase = useRef();
 	const [inputValue, setInputValue] = useState('');
-	const filterVegetables = () => {
-		console.log(inputValue);
+
+	useEffect(() => {
+		filterVegetables(inputValue); // Call the filtering function whenever the input value changes
+	}, [inputValue]);
+
+	const filterVegetables = (value) => {
+		const filteredArr = dataArr.filter((el) => {
+			// Use includes instead of strict comparison for case-insensitive filtering
+			return el.name.toLowerCase().includes(value.toLowerCase());
+		});
+
+		setVegetablesArr(filteredArr);
 	};
 
 	return (
@@ -14,7 +28,6 @@ function SearchBar() {
 				type='text'
 				onChange={(e) => {
 					setInputValue(e.target.value);
-					filterVegetables();
 				}}
 			/>
 		</div>

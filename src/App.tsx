@@ -5,8 +5,9 @@ import MainContext from './Context/MainContext';
 import Details from './Components/Details/Details';
 
 function App() {
-	const [openedVeg, setOpenedVeg] = useState<null | number>(null); // Define the type explicitly
-	const states = {openedVeg, setOpenedVeg};
+	const [openedVeg, setOpenedVeg] = useState<null | number>(null);
+	const [vegetablesArr, setVegetablesArr] = useState<[]>([]);
+	const states = {openedVeg, setOpenedVeg, vegetablesArr, setVegetablesArr};
 
 	return <MainContext.Provider value={states}>{openedVeg !== null ? <Details /> : <Home />}</MainContext.Provider>;
 }
