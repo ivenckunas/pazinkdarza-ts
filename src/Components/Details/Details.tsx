@@ -10,10 +10,11 @@ function Details() {
 	return (
 		<div className='details-container'>
 			<div className='images-container'>
-				{images.map((img) => (
+				{images.map((img, id) => (
 					<img
+						key={id}
 						src={img}
-						alt=''
+						alt={`Picture of ${currentVeg.name}`}
 					/>
 				))}
 			</div>

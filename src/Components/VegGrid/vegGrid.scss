@@ -1,19 +1,16 @@
 .grid-container {
+  margin: 5rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-image: url('../../assets/images/bg.jpg');
-  background-size: cover;
-  height: 100vh;
 
   .single-veg {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     transition: 0.2s ease-in-out;
 
     img {
-      height: 90px;
-      width: 90px;
+      height: 50px;
+      width: 50px;
       aspect-ratio: 1/1;
       transition: 0.2s ease-in-out;
 

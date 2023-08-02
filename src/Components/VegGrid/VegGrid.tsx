@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import './vegGrid.scss';
 import dataArr from '../../data/dataArr';
 import MainContext from '../../Context/MainContext';
-import bg from '../../assets/images/bg.jpg';
+import {Tooltip} from 'react-tooltip';
 
 function VegGrid() {
 	const handleSingleVegClick = (id: number) => {
@@ -18,12 +18,14 @@ function VegGrid() {
 					key={id}
 					className='single-veg'
 				>
+					<Tooltip id='my-tooltip' />
 					<img
+						data-tooltip-id='my-tooltip'
+						data-tooltip-content={el.name}
 						onClick={() => handleSingleVegClick(id)}
 						src={el.pixelImage}
-						alt=''
+						alt={`Picture of ${el.name}`}
 					/>
-					<h2>{el.name}</h2>
 				</div>
 			))}
 		</div>
