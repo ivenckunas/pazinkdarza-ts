@@ -9,7 +9,11 @@ function App() {
 	const [vegetablesArr, setVegetablesArr] = useState<[]>([]);
 	const states = {openedVeg, setOpenedVeg, vegetablesArr, setVegetablesArr};
 
-	return <MainContext.Provider value={states}>{openedVeg !== null ? <Details /> : <Home />}</MainContext.Provider>;
+	return (
+		<MainContext.Provider value={states}>
+			<main>{openedVeg !== null ? <Details /> : <Home />}</main>
+		</MainContext.Provider>
+	);
 }
 
 export default App;
