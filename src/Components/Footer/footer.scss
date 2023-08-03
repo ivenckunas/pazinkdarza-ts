@@ -1,13 +1,30 @@
 .footer-container {
   background: #dddddd;
-  height: min(10rem, 20vh);
   width: 100dvw;
   padding: 2rem;
 
   .footer-content {
-    width: min(90%, 1400px);
+    width: min(70dvw, 1400px);
     margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+
+      li {
+        list-style: none;
+        transition: 0.2s ease-in-out;
+        padding-bottom: 0.5rem;
+
+        &:hover {
+          opacity: 0.9;
+          color: rgb(68, 68, 68);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
