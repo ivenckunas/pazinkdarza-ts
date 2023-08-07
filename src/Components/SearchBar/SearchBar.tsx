@@ -1,21 +1,19 @@
-import {useContext, useRef, useState, useEffect} from 'react';
+import {useContext, useState, useEffect} from 'react';
 import './searchBar.scss';
 import dataArr from '../../data/dataArr';
 import MainContext from '../../Context/MainContext';
 
 function SearchBar() {
-	const {setOpenedVeg, openedVeg, vegetablesArr, setVegetablesArr} = useContext(MainContext);
+	const {setVegetablesArr} = useContext(MainContext);
 
-	const searchPhrase = useRef();
 	const [inputValue, setInputValue] = useState('');
 
 	useEffect(() => {
-		filterVegetables(inputValue); // Call the filtering function whenever the input value changes
+		filterVegetables(inputValue);
 	}, [inputValue]);
 
-	const filterVegetables = (value) => {
+	const filterVegetables = (value: string) => {
 		const filteredArr = dataArr.filter((el) => {
-			// Use includes instead of strict comparison for case-insensitive filtering
 			return el.name.toLowerCase().includes(value.toLowerCase());
 		});
 

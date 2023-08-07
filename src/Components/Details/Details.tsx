@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import {useContext, useState, useEffect} from 'react';
 import './details.scss';
 import MainContext from '../../Context/MainContext';
 import dataArr from '../../data/dataArr';
@@ -6,22 +6,24 @@ import dataArr from '../../data/dataArr';
 function Details() {
 	const {openedVeg, setOpenedVeg} = useContext(MainContext);
 
-	const [currentVeg, setCurrentVeg] = useState(dataArr[openedVeg]);
-	const [nextVeg, setNextVeg] = useState(null);
-	const [prevVeg, setPrevVeg] = useState(null);
+	const [currentVeg, setCurrentVeg] = useState(openedVeg);
+	const [nextVeg, setNextVeg] = useState();
+	const [prevVeg, setPrevVeg] = useState();
 
 	useEffect(() => {
-		setCurrentVeg(dataArr[openedVeg]);
-		setNextVeg(dataArr[openedVeg + 1]);
-		setPrevVeg(dataArr[openedVeg - 1]);
+		const currentVegIndex = dataArr.findIndex((veg) => veg.name === openedVeg.name);
+		console.log('currentVegIndex ===', currentVegIndex);
+		setCurrentVeg(openedVeg);
+		setNextVeg(dataArr[currentVegIndex + 1]);
+		setPrevVeg(dataArr[currentVegIndex - 1]);
 	}, [openedVeg]);
 
 	const handleNext = () => {
-		setOpenedVeg(openedVeg + 1);
+		setOpenedVeg(nextVeg);
 	};
 
 	const handlePrev = () => {
-		setOpenedVeg(openedVeg - 1);
+		setOpenedVeg(prevVeg);
 	};
 
 	const backToHomePage = () => {
@@ -29,8 +31,9 @@ function Details() {
 	};
 
 	const images = currentVeg.images;
-	const isFirstItem = openedVeg === 0;
-	const isLastItem = openedVeg === dataArr.length - 1;
+	const isFirstItem = !prevVeg;
+	const isLastItem = !nextVeg;
+
 	return (
 		<div className='details-container'>
 			<div className='images-container'>
@@ -48,9 +51,9 @@ function Details() {
 				<p>{currentVeg.desc}</p>
 			</div>
 			<div className='buttons'>
-				{isFirstItem ? <button disabled>Atgal</button> : <button onClick={() => handlePrev()}>Atgal</button>}
-				{isLastItem ? <button disabled>Pirmyn</button> : <button onClick={() => handleNext()}>Pirmyn</button>}
-				<button onClick={() => backToHomePage()}>Grizti</button>
+				{isFirstItem ? <button disabled>Atgal</button> : <button onClick={handlePrev}>Atgal</button>}
+				{isLastItem ? <button disabled>Pirmyn</button> : <button onClick={handleNext}>Pirmyn</button>}
+				<button onClick={backToHomePage}>Grizti</button>
 			</div>
 		</div>
 	);
