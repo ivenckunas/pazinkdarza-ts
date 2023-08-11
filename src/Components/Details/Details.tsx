@@ -38,8 +38,12 @@ function Details() {
 
 	return (
 		<>
-			<header style={{backgroundImage: `url(${images[0]})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-				<h1>{currentVeg.name}</h1> <h2>{currentVeg.type}</h2>
+			<header>
+				<h1>{currentVeg.name}</h1>
+				<img
+					src={currentVeg.pixelImage}
+					alt={`Image of ${currentVeg.name}`}
+				/>
 			</header>
 			<div className='details-container'>
 				<div className='images-container'>

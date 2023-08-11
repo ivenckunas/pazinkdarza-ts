@@ -10,7 +10,7 @@ function Home() {
 	const {openedVeg} = useContext(MainContext);
 
 	return (
-		<div className={openedVeg === null ? 'container container-bg' : 'container'}>
+		<div className='container'>
 			<About />
 			<SearchBar />
 			<VegGrid />

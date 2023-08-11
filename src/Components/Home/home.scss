@@ -3,15 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
+@media screen and (max-width: 1024px) {
 
-
-.container-bg {
-  background-image: url('../../assets/images/bg.png');
-  background-position: 0rem -15rem;
-  background-repeat: no-repeat;
-  background-size: cover;
+  .container {
+    height: 100%;
+    padding-top: 0.5rem;
+  }
 }
