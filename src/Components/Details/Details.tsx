@@ -3,10 +3,10 @@ import './details.scss';
 import MainContext from '../../Context/MainContext';
 import dataArr from '../../data/dataArr';
 import Footer from '../Footer/Footer';
+import AccordionComp from '../Accordion/AccordionComp';
 
 function Details() {
 	const {openedVeg, setOpenedVeg} = useContext(MainContext);
-
 	const [currentVeg, setCurrentVeg] = useState(openedVeg);
 
 	const [nextVeg, setNextVeg] = useState(null);
@@ -55,18 +55,7 @@ function Details() {
 						/>
 					))}
 				</div>
-				<div className='desc'>
-					<h3>Aprašymas:</h3>
-					<p>{currentVeg.desc}</p>
-					<h3>Dirva:</h3>
-					<p>{currentVeg.soil}</p>
-					<h3>Sėja:</h3>
-					<p>{currentVeg.sowing}</p>
-					<h3>Priežiūra:</h3>
-					<p>{currentVeg.caring}</p>
-					<h3>Derliaus nuėmimas:</h3>
-					<p>{currentVeg.harvesting}</p>
-				</div>
+				<AccordionComp />
 				<div className='buttons'>
 					{isFirstItem ? <button disabled>Atgal</button> : <button onClick={handlePrev}>Atgal</button>}
 					{isLastItem ? <button disabled>Pirmyn</button> : <button onClick={handleNext}>Pirmyn</button>}
