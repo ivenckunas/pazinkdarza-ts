@@ -5,7 +5,9 @@ function Footer() {
 	return (
 		<div className='footer-container'>
 			<div className='footer-content'>
-				<p>Visa info iš: G.Visockienė "Jaunajam daržininkui" ir "Sodininko ir daržininko mėgejo žinynas". Abi knygos man kainavo 1.80eur.</p>
+				<p>
+					Visa info iš: G.Visockienė "Jaunajam daržininkui" ir "Sodininko ir daržininko mėgejo žinynas". <br /> Abi knygos man kainavo 3.6eur.
+				</p>
 				<a
 					href='https://www.linkedin.com/in/ignas-venckunas/'
 					target='_blank'
