@@ -27,7 +27,7 @@ function Footer() {
 					<div className='art'>
 						<p>Daržovių pixel art - Anton P.</p>
 						<a
-							href='https://www.linkedin.com/in/ignas-venckunas/'
+							href='https://www.linkedin.com/in/anton-polujanov-40062b271/'
 							target='_blank'
 						>
 							<BsLinkedin />
