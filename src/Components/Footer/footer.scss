@@ -6,6 +6,20 @@
     text-align: center;
     padding: 3rem;
     margin: auto;
+    font-size: 0.9rem;
+
+    .dev,
+    .art {
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin: 0;
+        margin-right: 0.5rem;
+      }
+    }
 
     a {
       color: black;
@@ -27,9 +41,11 @@
 @media screen and (max-width: 1024px) {
 
   .footer-container {
-    padding: 1rem;
+
 
     .footer-content {
+      padding: 2rem;
+      font-size: 0.8rem;
       display: flex;
       flex-direction: column;
       text-align: center;
