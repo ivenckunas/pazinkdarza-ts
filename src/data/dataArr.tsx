@@ -5,22 +5,11 @@ import potato from '../assets/images/potato.png';
 import pumpkin from '../assets/images/pumpkin.png';
 import peas from '../assets/images/peas.png';
 import radish from '../assets/images/radish.png';
+import {Veg} from '../Context/MainContext';
 
-type Veg = {
-	pixelImage: string;
-	name: string;
-	type: string;
-	desc: string;
-	soil: string;
-	sowing: string;
-	caring: string;
-	harvesting: string;
-	greenhouse?: string;
-	images: string[];
-}[];
-
-const dataArr: Veg = [
+const dataArr: Veg[] = [
 	{
+		id: 0,
 		pixelImage: carrot,
 		name: 'Morka',
 		type: 'Daržovė',
@@ -32,6 +21,7 @@ const dataArr: Veg = [
 		images: ['https://www.liveeatlearn.com/wp-content/uploads/2018/04/carrot-on-white-vert.jpg', 'https://cf.organicbazar.net/wp-content/uploads/2021/06/Untitled-design-44.jpg', 'https://foodandnutrition.org/wp-content/uploads/Savor-Carrots-780x520.jpg', 'https://nationaltoday.com/wp-content/uploads/2021/04/Carrot-1200x834.jpg'],
 	},
 	{
+		id: 1,
 		pixelImage: tomato,
 		name: 'Pomidoras',
 		type: 'Daržovė',
@@ -44,6 +34,7 @@ const dataArr: Veg = [
 		images: ['https://images.pexels.com/photos/5561311/pexels-photo-5561311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/9367465/pexels-photo-9367465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/965740/pexels-photo-965740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
 	},
 	{
+		id: 2,
 		pixelImage: cucumber,
 		name: 'Agurkas',
 		type: 'Daržovė',
@@ -55,6 +46,7 @@ const dataArr: Veg = [
 		images: ['https://images.pexels.com/photos/2775838/pexels-photo-2775838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/9020085/pexels-photo-9020085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/13622740/pexels-photo-13622740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/2329440/pexels-photo-2329440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
 	},
 	{
+		id: 3,
 		pixelImage: potato,
 		name: 'Bulvė',
 		type: 'Daržovė',
@@ -66,6 +58,7 @@ const dataArr: Veg = [
 		images: ['https://images.pexels.com/photos/4110476/pexels-photo-4110476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://www.almanac.com/sites/default/files/images/potato%20plants%20Avalon_Studio%20GettyImages.jpg', 'https://www.gfloutdoors.com/wp-content/uploads/2021/04/Growing-Potatoes.jpg', 'https://www.allaboutgardening.com/wp-content/uploads/2022/03/Grow-Potatoes-1200x667.jpg'],
 	},
 	{
+		id: 4,
 		pixelImage: pumpkin,
 		name: 'Moliūgas',
 		type: 'Daržovė',
@@ -77,6 +70,7 @@ const dataArr: Veg = [
 		images: ['https://plantvillage-production-new.s3.amazonaws.com/image/4733/file/default-9d34239e8827213a35e508251276a744.jpg', 'https://www.harrisseeds.com/cdn/shop/articles/pumpkin_blog_header_1024x1024.jpg?v=1659370148', 'https://hips.hearstapps.com/hmg-prod/images/pumpkins-on-vine-1-649f459f5df06.jpg?crop=1xw:0.9642857142857143xh;center,top', 'https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2019/11/a-bunch-of-pumpkins-in-a-box.jpg?w=1155&h=1734'],
 	},
 	{
+		id: 5,
 		pixelImage: peas,
 		name: 'Žirniai',
 		type: 'Daržovė',
@@ -88,6 +82,7 @@ const dataArr: Veg = [
 		images: ['https://www.almanac.com/sites/default/files/images/pea%20plant%20StanRohrer%20GettyImages.jpg', 'https://styla-prod-us.imgix.net/b7fc887a-f0c4-4ca7-b83d-a7c7cd325b61/1623016578803_03e5ba09-8228-45da-87a9-1a013acdb776?auto=format%2Ccompress&w=1920&h=1371&fit=original', 'https://harvesttotable.com/wp-content/uploads/2017/01/Pea-bigstock-Small-pea-plant-18673091-1024x1004.jpg', 'https://ferrymorse.com/cdn/shop/products/Pea-Little-Marvel-Vegetable-Ferry-Morse.jpg?v=1610028928'],
 	},
 	{
+		id: 6,
 		pixelImage: radish,
 		name: 'Ridikėliai',
 		type: 'Daržovė',

@@ -1,49 +1,58 @@
 import {useContext, useState, useEffect} from 'react';
 import './details.scss';
-import MainContext from '../../Context/MainContext';
+import MainContext, {Veg} from '../../Context/MainContext';
 import dataArr from '../../data/dataArr';
 import Footer from '../Footer/Footer';
 import AccordionComp from '../Accordion/AccordionComp';
 
 function Details() {
-	const {openedVeg, setOpenedVeg} = useContext(MainContext);
-	const [currentVeg, setCurrentVeg] = useState(openedVeg);
+	const context = useContext(MainContext);
+	const {openedVeg, setOpenedVeg} = context || {};
 
-	const [nextVeg, setNextVeg] = useState(null);
-	const [prevVeg, setPrevVeg] = useState(null);
+	const [currentVeg, setCurrentVeg] = useState<Veg | undefined>(undefined);
+	const [nextVeg, setNextVeg] = useState<Veg | null>(null);
+	const [prevVeg, setPrevVeg] = useState<Veg | null>(null);
+	const openedVegObject = dataArr.find((veg) => veg.id === openedVeg);
 
 	useEffect(() => {
-		const currentVegIndex = dataArr.findIndex((veg) => veg.name === openedVeg.name);
-
-		setCurrentVeg(openedVeg);
+		const currentVegIndex = dataArr.findIndex((veg) => veg.id === openedVeg);
+		setCurrentVeg(dataArr[currentVegIndex]);
 		setNextVeg(dataArr[currentVegIndex + 1]);
 		setPrevVeg(dataArr[currentVegIndex - 1]);
 	}, [openedVeg]);
 
+	const images = openedVegObject ? openedVegObject.images : [];
+	const isFirstItem = openedVegObject === dataArr[0];
+	const isLastItem = openedVegObject === dataArr[dataArr.length - 1];
+
 	const handleNext = () => {
-		setOpenedVeg(nextVeg);
+		if (setOpenedVeg && nextVeg) {
+			setOpenedVeg(nextVeg.id);
+		}
 	};
 
 	const handlePrev = () => {
-		setOpenedVeg(prevVeg);
+		if (setOpenedVeg && prevVeg) {
+			setOpenedVeg(prevVeg.id);
+		}
 	};
 
 	const backToHomePage = () => {
-		setOpenedVeg(null);
+		if (setOpenedVeg) {
+			setOpenedVeg(null);
+		}
 	};
-
-	const images = currentVeg.images;
-	const isFirstItem = !prevVeg;
-	const isLastItem = !nextVeg;
 
 	return (
 		<>
 			<header>
-				<h1>{currentVeg.name}</h1>
-				<img
-					src={currentVeg.pixelImage}
-					alt={`Image of ${currentVeg.name}`}
-				/>
+				<>
+					<h1>{openedVegObject?.name}</h1>
+					<img
+						src={openedVegObject?.pixelImage}
+						alt={`Image of ${openedVegObject?.name}`}
+					/>
+				</>
 			</header>
 			<div className='details-container'>
 				<div className='images-container'>
@@ -51,15 +60,25 @@ function Details() {
 						<img
 							key={id}
 							src={img}
-							alt={`Picture of ${currentVeg.name}`}
+							alt={`Picture of ${currentVeg?.name || ''}`}
 						/>
 					))}
 				</div>
 				<AccordionComp />
 				<div className='buttons'>
-					{isFirstItem ? <button disabled>Atgal</button> : <button onClick={handlePrev}>Atgal</button>}
-					{isLastItem ? <button disabled>Pirmyn</button> : <button onClick={handleNext}>Pirmyn</button>}
-					<button onClick={backToHomePage}>Grizti</button>
+					<button
+						disabled={isFirstItem}
+						onClick={handlePrev}
+					>
+						Atgal
+					</button>
+					<button
+						disabled={isLastItem}
+						onClick={handleNext}
+					>
+						Pirmyn
+					</button>
+					<button onClick={backToHomePage}>Grįžti</button>
 				</div>
 			</div>
 			<Footer />

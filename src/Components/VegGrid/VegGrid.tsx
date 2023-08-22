@@ -1,38 +1,37 @@
-import {useContext, useEffect} from 'react';
+import {useContext} from 'react';
 import './vegGrid.scss';
-import dataArr from '../../data/dataArr';
-import MainContext from '../../Context/MainContext';
 import {Tooltip} from 'react-tooltip';
+import MainContext, {Veg} from '../../Context/MainContext'; // Import Veg type from MainContext
 
 function VegGrid() {
+	const context = useContext(MainContext);
+	const {setOpenedVeg, vegetablesArr} = context || {};
+
 	const handleSingleVegClick = (name: string) => {
-		const singleVeg = dataArr.find((el) => el.name === name);
-		setOpenedVeg(singleVeg);
+		const singleVeg = vegetablesArr?.find((el) => el.name === name);
+		if (setOpenedVeg && singleVeg) {
+			setOpenedVeg(singleVeg.id);
+		}
 	};
-
-	useEffect(() => {
-		setVegetablesArr(dataArr);
-	}, []);
-
-	const {setOpenedVeg, openedVeg, vegetablesArr, setVegetablesArr} = useContext(MainContext);
 
 	return (
 		<div className='grid-container'>
-			{vegetablesArr.map((el, id: number) => (
-				<div
-					key={id}
-					className='single-veg'
-				>
-					<Tooltip id='my-tooltip' />
-					<img
-						data-tooltip-id='my-tooltip'
-						data-tooltip-content={el.name}
-						onClick={() => handleSingleVegClick(el.name)}
-						src={el.pixelImage}
-						alt={`Picture of ${el.name}`}
-					/>
-				</div>
-			))}
+			{vegetablesArr &&
+				vegetablesArr.map((el: Veg, id: number) => (
+					<div
+						key={id}
+						className='single-veg'
+					>
+						<Tooltip id='my-tooltip' />
+						<img
+							data-tooltip-id='my-tooltip'
+							data-tooltip-content={el.name}
+							onClick={() => handleSingleVegClick(el.name)}
+							src={el.pixelImage}
+							alt={`Picture of ${el.name}`}
+						/>
+					</div>
+				))}
 		</div>
 	);
 }

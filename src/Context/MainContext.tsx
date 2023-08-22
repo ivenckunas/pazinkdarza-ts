@@ -1,15 +1,26 @@
-import {createContext} from 'react';
+import {createContext, Dispatch, SetStateAction} from 'react';
+
+export type Veg = {
+	id: number;
+	pixelImage: string;
+	name: string;
+	type: string;
+	desc: string;
+	soil: string;
+	sowing: string;
+	caring: string;
+	harvesting: string;
+	greenhouse?: string;
+	images: string[];
+};
 
 type OpenedVegetable = {
-	setOpenedVeg: React.Dispatch<React.SetStateAction<number>>;
+	openedVeg: number | null;
+	setOpenedVeg: Dispatch<SetStateAction<number | null>>;
+	vegetablesArr: Veg[];
+	setVegetablesArr: Dispatch<SetStateAction<Veg[]>>;
 };
 
-const defaultValue: OpenedVegetable = {
-	setOpenedVeg: () => {
-		Number;
-	},
-};
-
-const MainContext = createContext<OpenedVegetable>(defaultValue);
+const MainContext = createContext<OpenedVegetable | undefined>(undefined);
 
 export default MainContext;

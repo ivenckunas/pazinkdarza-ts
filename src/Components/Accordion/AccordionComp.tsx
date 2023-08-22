@@ -1,21 +1,22 @@
-import React, {useContext, useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import MainContext from '../../Context/MainContext';
 import './accordionComp.scss';
 import dataArr from '../../data/dataArr';
 
 function AccordionComp() {
-	const {openedVeg, setOpenedVeg} = useContext(MainContext);
-	const [selected, setSelected] = useState(null);
-	const [opened, setOpened] = useState(true);
+	const context = useContext(MainContext);
+	const {openedVeg} = context || {};
+	const [selected, setSelected] = useState<number | null>(null);
+	const openedVegObject = dataArr.find((veg) => veg.id === openedVeg);
 
 	const data = [
-		{title: 'Dirva', content: openedVeg.soil},
-		{title: 'Sėja', content: openedVeg.sowing},
-		{title: 'Priežiūra', content: openedVeg.caring},
-		{title: 'Derliaus nuėmimas', content: openedVeg.harvesting},
+		{title: 'Dirva', content: openedVegObject?.soil || ''},
+		{title: 'Sėja', content: openedVegObject?.sowing || ''},
+		{title: 'Priežiūra', content: openedVegObject?.caring || ''},
+		{title: 'Derliaus nuėmimas', content: openedVegObject?.harvesting || ''},
 	];
 
-	const toggle = (i) => {
+	const toggle = (i: number) => {
 		if (selected === i) {
 			return setSelected(null);
 		}
@@ -29,7 +30,7 @@ function AccordionComp() {
 	return (
 		<div className='accordion'>
 			<h4>Aprašymas</h4>
-			<p>{openedVeg.desc}</p>
+			<p>{openedVegObject?.desc || ''}</p>
 			<div>
 				{data.map((item, i) => (
 					<div
