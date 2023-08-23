@@ -6,9 +6,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"start:custom": "vite build && vite preview --port 3500",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"start:serve": "vite preview --port 3500"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
