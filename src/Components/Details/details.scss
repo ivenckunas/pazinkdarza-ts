@@ -23,7 +23,7 @@ header {
 
   .images-container {
     margin: 0 auto;
-    width: 74dvw;
+    width: min(100%, 1400px);
 
     img:nth-of-type(1),
     img:nth-of-type(2) {
@@ -51,8 +51,8 @@ header {
 
   .buttons {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 2rem;
+    right: 1.5rem;
     display: flex;
     gap: 0.3rem;
 
@@ -101,5 +101,10 @@ header {
   .details-container {
     padding: 1rem;
 
+
+    .buttons {
+      bottom: 4dvh;
+      right: 0.35rem;
+    }
   }
 }
