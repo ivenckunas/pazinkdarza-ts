@@ -1,0 +1,15 @@
+.blog-container {
+  width: 70dvw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 3rem;
+
+  .card {
+    min-height: 200px;
+    flex-grow: 1;
+    background-color: rgb(160, 160, 160);
+    padding: 4rem;
+    border-radius: 10px;
+  }
+}

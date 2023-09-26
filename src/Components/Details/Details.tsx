@@ -25,21 +25,31 @@ function Details() {
 	const isFirstItem = openedVegObject === dataArr[0];
 	const isLastItem = openedVegObject === dataArr[dataArr.length - 1];
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth', // This smooth scrolling is optional
+		});
+	};
+
 	const handleNext = () => {
 		if (setOpenedVeg && nextVeg) {
 			setOpenedVeg(nextVeg.id);
+			scrollToTop();
 		}
 	};
 
 	const handlePrev = () => {
 		if (setOpenedVeg && prevVeg) {
 			setOpenedVeg(prevVeg.id);
+			scrollToTop();
 		}
 	};
 
 	const backToHomePage = () => {
 		if (setOpenedVeg) {
 			setOpenedVeg(null);
+			scrollToTop();
 		}
 	};
 
@@ -55,6 +65,7 @@ function Details() {
 				</>
 			</header>
 			<div className='details-container'>
+				<AccordionComp />
 				<div className='images-container'>
 					{images.map((img: string, id: number) => (
 						<img
@@ -64,7 +75,6 @@ function Details() {
 						/>
 					))}
 				</div>
-				<AccordionComp />
 				<div className='buttons'>
 					<button
 						disabled={isFirstItem}

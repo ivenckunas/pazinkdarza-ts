@@ -18,50 +18,35 @@ header {
   padding: 2rem;
   margin: 0 auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
 
   .images-container {
     margin: 0 auto;
     width: min(100%, 1400px);
 
-    img:nth-of-type(1),
-    img:nth-of-type(2) {
-      height: 200px;
+    img {
+      height: 300px;
       width: 50%;
       margin-right: auto;
       object-fit: cover;
-      margin-bottom: -5px;
-    }
-
-    img:nth-of-type(3) {
-      height: 30vh;
-      width: 100%;
-      object-fit: cover;
-      margin-bottom: -5px;
-    }
-
-    img:nth-of-type(4),
-    img:nth-of-type(5) {
-      height: 40vh;
-      object-fit: cover;
-      margin-bottom: -5px;
+      padding-bottom: 16px;
     }
   }
 
   .buttons {
-    position: fixed;
-    bottom: 2rem;
-    right: 1.5rem;
     display: flex;
-    gap: 0.3rem;
+    justify-content: center;
+    gap: 0.5rem;
+
+
 
     button {
       background: #FBCA1F;
       font-family: inherit;
       padding: 0.5em 1.1em;
-      font-weight: 900;
-      font-size: 18px;
+      font-weight: 600;
+      font-size: 16px;
       border: 3px solid black;
       border-radius: 0.4em;
       box-shadow: 0.1em 0.1em;
@@ -100,11 +85,5 @@ header {
 
   .details-container {
     padding: 1rem;
-
-
-    .buttons {
-      bottom: 4dvh;
-      right: 0.35rem;
-    }
   }
 }
