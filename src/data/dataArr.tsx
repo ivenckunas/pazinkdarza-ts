@@ -1,10 +1,10 @@
-import carrot from '../assets/images/carrot.png';
-import tomato from '../assets/images/tomato.png';
-import cucumber from '../assets/images/cucumber.png';
-import potato from '../assets/images/potato.png';
-import pumpkin from '../assets/images/pumpkin.png';
-import peas from '../assets/images/peas.png';
-import radish from '../assets/images/radish.png';
+import carrot from '../assets/images/carrot.webp';
+import tomato from '../assets/images/tomato.webp';
+import cucumber from '../assets/images/cucumber.webp';
+import potato from '../assets/images/potato.webp';
+import pumpkin from '../assets/images/pumpkin.webp';
+import peas from '../assets/images/peas.webp';
+import radish from '../assets/images/radish.webp';
 import {Veg} from '../Context/MainContext';
 
 const dataArr: Veg[] = [
