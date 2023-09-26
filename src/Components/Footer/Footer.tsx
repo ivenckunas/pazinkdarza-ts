@@ -14,12 +14,14 @@ function Footer() {
 						<a
 							href='https://www.linkedin.com/in/ignas-venckunas/'
 							target='_blank'
+							aria-label='Linkedin page of Ignas Venckunas'
 						>
 							<BsLinkedin />
 						</a>
 						<a
 							href='https://github.com/ivenckunas'
 							target='_blank'
+							aria-label='Github page of Ignas Venckunas'
 						>
 							<BsGithub />
 						</a>
@@ -29,6 +31,7 @@ function Footer() {
 						<a
 							href='https://www.linkedin.com/in/anton-polujanov-40062b271/'
 							target='_blank'
+							aria-label='Linkedin page of Anton Polujanov'
 						>
 							<BsLinkedin />
 						</a>

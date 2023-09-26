@@ -26,7 +26,7 @@ function SearchBar() {
 
 	return (
 		<div className='search-container'>
-			<div className='label'>Nori greičiau? Ieškok:</div>
+			<label>Nori greičiau? Ieškok:</label>
 			<input
 				type='text'
 				onChange={(e) => {
