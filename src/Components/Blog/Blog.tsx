@@ -1,13 +1,12 @@
-import './blog.scss';
+import blogPostsArr from '../../data/blogPosts';
+import SingleBlog from './SingleBlog';
 
 function Blog() {
 	return (
 		<div className='blog-container'>
-			<div className='card'></div>
-			<div className='card'></div>
-			<div className='card'></div>
-			<div className='card'></div>
-			<div className='card'></div>
+			{blogPostsArr.map((blog) => (
+				<SingleBlog blog={blog} />
+			))}
 		</div>
 	);
 }

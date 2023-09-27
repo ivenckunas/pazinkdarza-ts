@@ -1,6 +1,6 @@
 export type blogPost = {
 	title: string;
-	date: number;
+
 	content: string;
 	author: string;
 };
@@ -8,7 +8,21 @@ export type blogPost = {
 const blogPostsArr: blogPost[] = [
 	{
 		title: 'aaa',
-		date: 2023,
+		content: 'aaaaaaaa',
+		author: 'aaaaaaaaaaaaa',
+	},
+	{
+		title: 'aaa',
+		content: 'aaaaaaaa',
+		author: 'aaaaaaaaaaaaa',
+	},
+	{
+		title: 'aaa',
+		content: 'aaaaaaaa',
+		author: 'aaaaaaaaaaaaa',
+	},
+	{
+		title: 'aaa',
 		content: 'aaaaaaaa',
 		author: 'aaaaaaaaaaaaa',
 	},

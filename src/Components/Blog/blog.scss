@@ -1,15 +1,29 @@
 .blog-container {
+  margin: 0 auto;
   width: 70dvw;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 
   .card {
     min-height: 200px;
     flex-grow: 1;
-    background-color: rgb(160, 160, 160);
+    background-color: #f5f5f5;
     padding: 4rem;
     border-radius: 10px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-container {
+    width: 80dvw;
+    grid-template-columns: 1fr;
   }
 }
