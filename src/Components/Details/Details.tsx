@@ -4,11 +4,15 @@ import MainContext, {Veg} from '../../Context/MainContext';
 import dataArr from '../../data/dataArr';
 import Footer from '../Footer/Footer';
 import AccordionComp from '../Accordion/AccordionComp';
+import {useNavigate} from 'react-router-dom';
+import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
 
 function Details() {
+	const nav = useNavigate();
 	const context = useContext(MainContext);
 	const {openedVeg, setOpenedVeg} = context || {};
 
+	const [favorited, setFavorited] = useState(false);
 	const [currentVeg, setCurrentVeg] = useState<Veg | undefined>(undefined);
 	const [nextVeg, setNextVeg] = useState<Veg | null>(null);
 	const [prevVeg, setPrevVeg] = useState<Veg | null>(null);
@@ -36,6 +40,7 @@ function Details() {
 		if (setOpenedVeg && nextVeg) {
 			setOpenedVeg(nextVeg.id);
 			scrollToTop();
+			nav(`/darzoves/${nextVeg.name?.toLowerCase()}`);
 		}
 	};
 
@@ -43,6 +48,7 @@ function Details() {
 		if (setOpenedVeg && prevVeg) {
 			setOpenedVeg(prevVeg.id);
 			scrollToTop();
+			nav(`/darzoves/${prevVeg.name?.toLowerCase()}`);
 		}
 	};
 
@@ -50,6 +56,7 @@ function Details() {
 		if (setOpenedVeg) {
 			setOpenedVeg(null);
 			scrollToTop();
+			nav('/');
 		}
 	};
 
@@ -90,6 +97,9 @@ function Details() {
 					</button>
 					<button onClick={backToHomePage}>Grįžti</button>
 				</div>
+				{/* <div className='buttons'>
+					<button onClick={() => setFavorited(!favorited)}>{favorited ? <AiFillHeart /> : <AiOutlineHeart />}</button>
+				</div> */}
 			</div>
 			<Footer />
 		</>

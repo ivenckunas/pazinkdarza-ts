@@ -2,13 +2,16 @@ import {useContext} from 'react';
 import './vegGrid.scss';
 import {Tooltip} from 'react-tooltip';
 import MainContext, {Veg} from '../../Context/MainContext'; // Import Veg type from MainContext
+import {useNavigate} from 'react-router-dom';
 
 function VegGrid() {
+	const nav = useNavigate();
 	const context = useContext(MainContext);
 	const {setOpenedVeg, vegetablesArr} = context || {};
 
 	const handleSingleVegClick = (name: string) => {
 		const singleVeg = vegetablesArr?.find((el) => el.name === name);
+		nav(`/darzoves/${singleVeg?.name?.toLowerCase()}`);
 		if (setOpenedVeg && singleVeg) {
 			setOpenedVeg(singleVeg.id);
 		}
