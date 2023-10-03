@@ -5,14 +5,14 @@ import dataArr from '../../data/dataArr';
 import Footer from '../Footer/Footer';
 import AccordionComp from '../Accordion/AccordionComp';
 import {useNavigate} from 'react-router-dom';
-import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
+// import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
 
 function Details() {
 	const nav = useNavigate();
 	const context = useContext(MainContext);
 	const {openedVeg, setOpenedVeg} = context || {};
 
-	const [favorited, setFavorited] = useState(false);
+	// const [favorited, setFavorited] = useState(false);
 	const [currentVeg, setCurrentVeg] = useState<Veg | undefined>(undefined);
 	const [nextVeg, setNextVeg] = useState<Veg | null>(null);
 	const [prevVeg, setPrevVeg] = useState<Veg | null>(null);
