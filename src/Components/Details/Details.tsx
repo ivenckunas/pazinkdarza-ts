@@ -5,14 +5,11 @@ import dataArr from '../../data/dataArr';
 import Footer from '../Footer/Footer';
 import AccordionComp from '../Accordion/AccordionComp';
 import {useNavigate} from 'react-router-dom';
-// import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
 
 function Details() {
 	const nav = useNavigate();
 	const context = useContext(MainContext);
 	const {openedVeg, setOpenedVeg} = context || {};
-
-	// const [favorited, setFavorited] = useState(false);
 	const [currentVeg, setCurrentVeg] = useState<Veg | undefined>(undefined);
 	const [nextVeg, setNextVeg] = useState<Veg | null>(null);
 	const [prevVeg, setPrevVeg] = useState<Veg | null>(null);
@@ -32,23 +29,15 @@ function Details() {
 	const scrollToTop = () => {
 		window.scrollTo({
 			top: 0,
-			behavior: 'smooth', // This smooth scrolling is optional
+			behavior: 'smooth',
 		});
 	};
 
-	const handleNext = () => {
-		if (setOpenedVeg && nextVeg) {
-			setOpenedVeg(nextVeg.id);
+	const handleNextAndPrev = (veg: Veg) => {
+		if (setOpenedVeg && veg) {
+			setOpenedVeg(veg.id);
 			scrollToTop();
-			nav(`/darzoves/${nextVeg.name?.toLowerCase()}`);
-		}
-	};
-
-	const handlePrev = () => {
-		if (setOpenedVeg && prevVeg) {
-			setOpenedVeg(prevVeg.id);
-			scrollToTop();
-			nav(`/darzoves/${prevVeg.name?.toLowerCase()}`);
+			nav(`/darzoves/${veg.name?.toLowerCase()}`);
 		}
 	};
 
@@ -63,13 +52,11 @@ function Details() {
 	return (
 		<>
 			<header>
-				<>
-					<h1>{openedVegObject?.name}</h1>
-					<img
-						src={openedVegObject?.pixelImage}
-						alt={`Image of ${openedVegObject?.name}`}
-					/>
-				</>
+				<h1>{openedVegObject?.name}</h1>
+				<img
+					src={openedVegObject?.pixelImage}
+					alt={`Image of ${openedVegObject?.name}`}
+				/>
 			</header>
 			<div className='details-container'>
 				<AccordionComp />
@@ -83,23 +70,30 @@ function Details() {
 					))}
 				</div>
 				<div className='buttons'>
-					<button
-						disabled={isFirstItem}
-						onClick={handlePrev}
-					>
-						Atgal
-					</button>
-					<button
-						disabled={isLastItem}
-						onClick={handleNext}
-					>
-						Pirmyn
-					</button>
-					<button onClick={backToHomePage}>Grįžti</button>
+					<div className='nav-buttons'>
+						<button
+							disabled={isFirstItem}
+							onClick={() => {
+								if (prevVeg !== null) {
+									handleNextAndPrev(prevVeg);
+								}
+							}}
+						>
+							Atgal
+						</button>
+						<button
+							disabled={isLastItem}
+							onClick={() => {
+								if (nextVeg !== null) {
+									handleNextAndPrev(nextVeg);
+								}
+							}}
+						>
+							Pirmyn
+						</button>
+						<button onClick={backToHomePage}>Grįžti</button>
+					</div>
 				</div>
-				{/* <div className='buttons'>
-					<button onClick={() => setFavorited(!favorited)}>{favorited ? <AiFillHeart /> : <AiOutlineHeart />}</button>
-				</div> */}
 			</div>
 			<Footer />
 		</>
