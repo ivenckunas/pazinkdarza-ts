@@ -36,25 +36,22 @@
   .item {
     margin-bottom: 0.5rem;
 
-
     .content {
       max-height: 0;
       overflow: hidden;
       padding: 0 1rem;
       background: hsl(0, 0%, 96%);
-      transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &.show {
+        height: auto;
+        max-height: 9999px;
+        background: hsl(0, 0%, 86%);
+        padding: 0 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+      }
     }
 
-    .content.show {
-      height: auto;
-      max-height: 9999px;
-      background: hsl(0, 0%, 86%);
-      padding: 0 1rem;
-      border-radius: 8px;
-      transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-      margin-top: 0.5rem;
-    }
   }
-
-
 }
