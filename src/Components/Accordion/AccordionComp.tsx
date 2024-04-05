@@ -44,7 +44,7 @@ function AccordionComp() {
 							<h4>{item.title}</h4>
 							<span>{selected === i ? '-' : '+'}</span>
 						</div>
-						<div className={selected === i ? 'content show ' : 'content'}>
+						<div className={selected === i ? 'content show' : 'content'}>
 							<p>{item.content}</p>
 						</div>
 					</div>

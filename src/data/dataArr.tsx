@@ -1,10 +1,24 @@
 import carrot from '../assets/images/carrot.webp';
+import carrot1 from '../assets/images/carrot1.webp';
+import carrot2 from '../assets/images/carrot2.webp';
 import tomato from '../assets/images/tomato.webp';
+import tomato1 from '../assets/images/tomato1.webp';
+import tomato2 from '../assets/images/tomato2.webp';
 import cucumber from '../assets/images/cucumber.webp';
+import cucumber1 from '../assets/images/cucumber1.webp';
+import cucumber2 from '../assets/images/cucumber2.webp';
 import potato from '../assets/images/potato.webp';
+import potato1 from '../assets/images/potato1.webp';
+import potato2 from '../assets/images/potato2.webp';
 import pumpkin from '../assets/images/pumpkin.webp';
+import pumpkin1 from '../assets/images/pumpkin1.webp';
+import pumpkin2 from '../assets/images/pumpkin2.webp';
 import peas from '../assets/images/peas.webp';
+import peas1 from '../assets/images/peas1.webp';
+import peas2 from '../assets/images/peas2.webp';
 import radish from '../assets/images/radish.webp';
+import radish1 from '../assets/images/radish1.webp';
+import radish2 from '../assets/images/radish2.webp';
 import {Veg} from '../Context/MainContext';
 
 const dataArr: Veg[] = [
@@ -18,7 +32,7 @@ const dataArr: Veg[] = [
 		sowing: 'Morkos sėjamos keliais terminais. Norint labai anksti (birželio pradžioje) turėti šviežių morkų, jas galima pasėti iš rudens. Parenkama lengva, nepiktžolėta dirva, spalio mėnesį sukasama lysvė ir joje skersai kas 15-20 cm įrėžiami grioveliai. Pradėjus pastoviai šalti (lapkričio pabaigoje ar gruodžio pradžioje), ant sušalusios dirvos į griovelius pasėjamos morkos ir nestorai (1,5-2 cm) užberiama durpėmis ar šiaip lengva žeme (žemių krūvelę reikia iš anksto pridengti medžių lapais, kad neperšaltų). Anksti pavasarį, kai dirvos temperatura pakyla iki 5-8°C, morkos sudygsta. Laikymui netinka, jas reikia suvartoti iki rudens. Antras sėjos terminas pavasarį - ievai sužaliavus (kai tik pradžiūsta dirva). Tuo laiku sėjamos morkos, kurios bus vartojamos maistui vasarą ir rudenį. Žiemai laikomas geriausiai sėti gegužės antroje pusėje. Morkos sėjamos į lysves 20 cm eilutė nuo eilutės ar eilėmis lygiame lauke 30-35 cm tarpueiliais. Morkos sėjamos netankiai ir labai negiliai. Jei sėklos daigios (70% ir daugiau), 10m2 apsėti reikia apie 5g sėklų. Kad būtų lengviau pasėti, morkų sėklas galima sumaišyti su smėliu ar pjuvenomis. Menkesnio daigumo sėklos sėjamos tankiau. Kaip minėta, morkos sėjamos labai negiliai (0,5-1,5cm gyliu). Per giliai pasėtos jos labai ilgai ir nevienodai dygsta. Pasėjus eilutėse žemė atvirkščiu grėbliu prispaudžiama, kad sėklos geriau prisiglaustų prie žemės.',
 		caring: 'Priežiūra. Augančioms morkoms dirva turi būti puri ir nepiktžolėta. Pasėtos morkos sausesniais metais dygsta net keturias savaites. Piktžolės tada greičiau sudygsta ir užgožia bedygstančias morkas. Todėl kartu su morkomis labai gerai įsėti salotų ar ridikėlių. Jie greitai sudygsta ir pasėlį galima anksti išravėti. Morkoms sudygus, reikia purenti tarpueilius ir per visą augimo laiko- tarpį stengtis pasėlį išlaikyti švarų, o tarpueilius purius, tada nereikės mor kų daug kartų ravėti. Sudygusios morkos, kai tik pasirodo tikrieji lapeliai, retinamos taip. kad augalas nuo augalo būtų kas 1,5-2 cm. Per tankiai augusių morkų daug būna netinkamų vartoti šakniavaisių. Morkos labai jautrios drėgmei. Pirmąjį mėnesį, kad augalai gerai past savintų trąšas ir galėtų normaliai augti, reikia daug drėgmės. Jei nėra lie rio, drėgmės reikia mažiau. Jeigu nebūna ilgesnės sausros, dirvoje drėgmės taus, pasėlis gausiai laistomas. Kai morkų šakniavaisis esti 1,5-2 cm storio, drėgmės reikia mažiau. Jeigu nebūna ilgesnės sausros, dirvoje drėgmės užtenka. Morkos labai blogai auga užmirkusiose dirvose, kai gruntinis vanduo yra labai aukštai. Be to, po liūčių stovintis paviršinis vanduo gall per 2-3 dienas sunaikinti pasėlį.',
 		harvesting: 'Kuo vėliau kasami morkų šakniavaisiai, tuo daugiau sukaupia cukrų ir karotino, geriau laikosi žiemą. Tačiau derlių reikia nuimti iki šalnų, nes pašalę, nes pašalę šaknavaisiai žiemą blogiau laikosi. Geriausia morkas kasti spalio pradžioje. Nukastos morkos tuojau pat yra rūšiuojamos, nusukami ar nupjaunami lapai. Laikymui atrenkami užaugę, sveiki, nesutrūkę, nešakoti šakniavaisiai. Nuimtą derlių laikyti rūsyje. Jeigu to nepavyksta padaryti, geriausia morkas apipilti švariomis žemėmis ir palaikyti iki didesnių šalčių. Morkų šakniavaisiai geriausiai išsilaiko 1-4°C temperatūroje, susluoksniuoti su švariu smėliu.',
-		images: ['https://www.liveeatlearn.com/wp-content/uploads/2018/04/carrot-on-white-vert.jpg', 'https://cf.organicbazar.net/wp-content/uploads/2021/06/Untitled-design-44.jpg'],
+		images: [carrot1, carrot2],
 	},
 	{
 		id: 1,
@@ -31,7 +45,7 @@ const dataArr: Veg[] = [
 		caring: 'Daigams prigijus ir vėliau augalai tręšiami papildomai. Kad pomidorų lapai, stiebai ir šaknų sistema geriau augtų ir vystytųsi, iš pradžių tręšiama azoto trąšomis. Pražydus pomidorams, kad geriau megztų vaisius, daugiau duodama fosforo ir kalio trąšų, kurios skatina ir šaknų vystymąasi. Ankstyvą ir gerą derlių duoda vienstiebiai pomidorai. Tokį augalą galima suformuoti šalinant papildomus stiebus ir pažastinius ūglius. Vienstiebiai pomidorai greitai auga ir vystosi, žiedadulkės anksčiau subręsta, geriau mezga ir gaunamas ankstyvesnis derlius. Vaisiai būna stambesni ir geresnio skonio. Kai sausa, pomidorai lasitomi gausiai, bet retai. Palaisčius dirvą apie augalus naudinga mulčiuoti arba apkaupti žeme.',
 		harvesting: 'Vaisiai skinami, kai pradeda nokti. Geriausia skinti vos raustančius vaisius ir laikyti vėsioje(2-4°C) bei sausoje vietoje.',
 		greenhouse: '',
-		images: ['https://images.pexels.com/photos/5561311/pexels-photo-5561311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
+		images: [tomato1, tomato2],
 	},
 	{
 		id: 2,
@@ -43,7 +57,7 @@ const dataArr: Veg[] = [
 		sowing: 'Agurkai sėjami arba sodinami praėjus šalnoms. Mūsų sąlygomis sausomis sėklomis pasėti agurkai sudygta per 5-7d. Sėjos metu temperatūra naktį neturi nukristi žemiau 10°C. Lysvėse agurkai sėjami vagutėse dvieilėmis juostmois. Atstumas tarp eilių - 20-25cm, o eilėje tarp sėklų - 1,5-2cm. Sėklos užberiamos 3-4cm storio žemių sluoksniu. Lygiame dirvos paviršiuje agurkus galima sėti eilėmis: ankstyvąsias veisles - 60-70cm, vidutinio ankstyvumo - 80-90cm atsumu viena nuo kitos.',
 		caring: 'Sudygusius arba tik pasodintus daigus reikia apsaugoti nuo šalnų, tam tinka polietileninė plėvelė. Būtina išrauti piktžoles, palaikyti dirvą purią. Kad nesusidarytų dirvos pluta (po lietaus ar palaisčius), patartina agurkus mulčiuoti 2-3cm storio durpiu ar puvenų sluoksniu. Laistyti reikia reuliariai. Jaunus augalus patartina lieti saikingai, o derančius - gausiai. Pasirodžius pirmajam tikrajam lapui, augalai retinami. Ankstyvųjų veislių augalai paliekami kas 5-6cm, vėlyvųjų - 8-10cm. Retinant augalus ne išrauti, bet nugnybti, kad nebūtų pažeistos greta augančio augalo šaknys. Išretintus augalus rekomenduojama truputį apkaupti.',
 		harvesting: 'Lauke agurkai pradeda derėti praėjus 35-60 dienų. Jei lapo pažastyje yra 2-3 užuomazgos, pirmąjį vaisių reikia nuskinti anksčiau, kad likusios užuomazgos nenudžiūtų. Vaisiai ilgiau laikosi, kai jie renkami iš ryto arba vakare.',
-		images: ['https://images.pexels.com/photos/9020085/pexels-photo-9020085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://images.pexels.com/photos/2329440/pexels-photo-2329440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'],
+		images: [cucumber1, cucumber2],
 	},
 	{
 		id: 3,
@@ -55,7 +69,7 @@ const dataArr: Veg[] = [
 		sowing: 'Parinkus tinkamą vietą, ankstyvąsias bulves geriausia sodinti balandžio antroje pusėje. Nesudygusioms bulvėms trumpalaikis atšalimas nepavojingas, o sudygusias bulves nuo pavasario šalnų galima apsaugoti kaupimu. Laukiant stipresnių šalnų galima kaupti net užberiant lapais. Patariama auginti vagomis, taip prie šaknų geriau prieina oras, dirva geriau įšyla. Sodinami tik sveiki, sveriantys ne mažiau kaip 80-100g. gumbai. Stambesni gumbai turi daugiau atsarginių maisto medžiagų, iš kurių išauga stipresni daigai. Ankstyvąsias bulves geriausia sodinti paliekant 60cm pločio tarpueilius ir 30cm tarp augalų. Ankstyvąsias bulves reikia sodinti negiliai, priemolio dirvose, 4cm gyliu, o lengvose priesmėlio dirvose - giliau - 7-8cm gyliu.',
 		caring: 'Po kiekvieno lietaus, iki bulvėms sudygstant, bent geležiniu grėbliu reikia suardyti dirvožemio paviršiuje susidariusią plutą. Bulvėms sudygus tarpueiliams purenti labai tinka rankiniai rotaciniai purentuvai. Jais išpurenama dirva ir sunaikinamos piktžolės. Pirmą kartą bulves reikia kaupti, kai jos yra 8-10cm aukščio, o antrą kartą 15-20cm aukščio. Kaupiant sekliai pasodintas bulves, padaromos aukštesnės vagos, kad bulvės galėtų normaliai augti ir vystytis.',
 		harvesting: 'Ankstyvam vartojimui bulves kaskime ne iš eilės, o kas antrą ar trečią kerą. Tada likusieji geriau augs. Visos bulvės pradedamos kasti tik subrendusios - rugsėjo menesį. Nuvytus bulvienojams bulviakasio neatidėliokime, nes, prasidėjus lietingiems orams nuo lapų ligos užkratas pateks ant gumbų ir bulvės blogai laikysis. Kasdami iš karto bulves rūšiuokime. Į vieną krepšį dėkime stambius ir vidutinius, o į kitą - smulkius ir mechaniškai pažeistus gumbus. Sumlkiais laikomi gumbai, kurių skersmuo mažesnis kaip 3cm.',
-		images: ['https://images.pexels.com/photos/4110476/pexels-photo-4110476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'https://www.gfloutdoors.com/wp-content/uploads/2021/04/Growing-Potatoes.jpg'],
+		images: [potato1, potato2],
 	},
 	{
 		id: 4,
@@ -67,7 +81,7 @@ const dataArr: Veg[] = [
 		sowing: 'Sėjama 70x70cm atstumu lizdiniu būdu(po 2-3 sėklas). Sėklos įterpiamos 5cm gyliu. Sudygusios, kai pasirodo pirmas tikrasis lapas, moliūgus išretinkime, palikdami po vieną augalą. Laistykime mažiau negu agurkus.',
 		caring: 'Kai susiformuoja 1-2 tikrieji lapai, retinama, lizde paliekant po vieną stipriausią augalą. Išretinti moliūgai patręšiami. Moliūgai labai reiklūs drėgmei, todėl, kai dirva sausa, reikia laistyti. Kol moliūgų lapai užskleidžia dirvą, reikia purenti tarpueilius, naikinti piktžoles. Stambesni moliūgų vaisiai užauga, kai ant vieno augalo paliekama augti ne daugiau kaip 3-4 vaisiai. Norint užauginti labai stambius vaisius, ant augalo paliekama tik 1-2 vaisiai, o kitos vaisių užuomazgos šalinamos, žiedams neišsiskleidus. Vaisiai greičiau auga, kai stiebai, ant kurių auga vaisiai, sutrumpinami virš vaisiaus paliekant 4-6 lapus. Išpjaunami ir šoniniai stiebai.',
 		harvesting: 'Moliūgų vaisiai imami, kai jie esti veislei būdingos spalvos ir dydžio. Vaisiai pjaunami su 10-15cm koteliu, nes be jo blogiau laikosi. Visą derlių reikia nuimti prieš šalnas. Nevisiškai subrendusius moliūgų vaisius 2-3 mėnesius galima išlaikyti vėdinamoje patalpoje, kurioje yra 3°C temperatūroje ir 60-75% santykinė oro drėgmė.',
-		images: ['https://www.harrisseeds.com/cdn/shop/articles/pumpkin_blog_header_1024x1024.jpg?v=1659370148', 'https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2019/11/a-bunch-of-pumpkins-in-a-box.jpg?w=1155&h=1734'],
+		images: [pumpkin1, pumpkin2],
 	},
 	{
 		id: 5,
@@ -79,7 +93,7 @@ const dataArr: Veg[] = [
 		sowing: 'Sėjami anksti pavasarį, nes vėliau pasėjus puola kenkėjai. Sėjami 5-6cm gyliu, Pradeda dygti esant 4-8°C temperatūrai, o lapai ir stiebai pakenčia šalnas iki 6°C. Darže žirnius geriausia sėti išilgai lysvės dviem eilėmism paliekant 10cm atstumą nuo kraštų.',
 		caring: 'Kad žirniai augdami neišgultų, lysvėje iš vidaus pusės susmeikime atramas. Pirmiau, jeigu reikia, išretinkime išravėkime ir supurenkime tarpus. Retindami palikime tarp augalų 13-15cm tarpus.',
 		harvesting: 'Skinami kai ankštis yra sultinga, o žirneliai minkšti.',
-		images: ['https://www.almanac.com/sites/default/files/images/pea%20plant%20StanRohrer%20GettyImages.jpg', 'https://styla-prod-us.imgix.net/b7fc887a-f0c4-4ca7-b83d-a7c7cd325b61/1623016578803_03e5ba09-8228-45da-87a9-1a013acdb776?auto=format%2Ccompress&w=1920&h=1371&fit=original'],
+		images: [peas1, peas2],
 	},
 	{
 		id: 6,
@@ -91,7 +105,7 @@ const dataArr: Veg[] = [
 		sowing: 'Ridikėliai sėjami 1.5-2cm gyliu. Sėjant tarp eilučių paliekami 10-15cm tarpai. Sudygę augalai retinami, paliekami kas 2-3cm. Kad užaugtų geros kokybės šakniavaisiai, ridikėlius kiekvieną savaitę laistykime(į 1m² ploto skirkime 10l vandens).',
 		caring: 'Pradėjus formuotis šakniavaisiams, purenkime tarpueilius ir ridikėlius apkaupkime. Ridikėliai atsparūs šalčiui, sudygę pakenčia 2-3°C šalnas, o užaugę - trumpalaikį atšalimą iki 5-6°C šalčio.',
 		harvesting: 'Užaugę ridikėliai raunami ne iš karto, o atrinktinai.',
-		images: ['https://gardeningtips.in/wp-content/uploads/2019/07/radishes-1141011_960_720.jpg', 'https://images.squarespace-cdn.com/content/v1/59bc4b7f017db254b3b5b7f7/1591215015097-GIETJ2CYZMEAMHBWESK5/image-asset.jpeg'],
+		images: [radish1, radish2],
 	},
 ];
 
